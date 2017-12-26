@@ -4949,6 +4949,23 @@ label monika_coffee:
     m 1k "Maybe if I find out how, I'll tinker with the script so I can finally drink some! Ahaha~"
     return
 
+init 5 python:
+    for key in ['code','file']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_file')
+    monika_random_topics.append('monika_file')
+
+label monika_write:
+    m 3f "Hey, [player]..."
+    m 1f "I was thinking about my code"
+    m "I mean, about the fact that file can just be copy and pased"
+    m 1g "There may be thousends of versions of me, or even more!"
+    m "How would it make you feel?"
+    m "If there was a world with so many versions of yourself, just as real as you are"
+    m 4b "Actually, I wouldn't mind such a world"
+    m 4k "The more of you, [player], the better!~"
+    return
+
 ##################
 #Incomplete ideas#
 ##################
