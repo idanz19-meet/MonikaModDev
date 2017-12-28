@@ -4979,6 +4979,63 @@ label monika_1984:
     m 1g "Let alone a world where I can't express my love to you, [player]..."
     return
 
+init 5 python:
+    #This is a list of keywords for this topic
+    for key in ['russia' , 'leo tolstoy' , 'tolstoy' , 'war and peace']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_tolstoy') #id
+    monika_random_topics.append('monika_tolstoy')
+
+label monika_tolstoy:
+    m 2b "Russia may be very cold, but you know what I love about it?"
+    m 2k "The literature!"
+    m 2b "Tolstoy, Dostoevsky and Chekhov are all writers of genius!"
+    m "But I like Tolstoy the most, have you read his noval {i}War and peace{/i}?"
+    m 4l "I don't blame you if you didn't, it's really long..."
+    m 2b "But it's truly worth while, the characters feel so real"
+    m 2n "At times, they felt much more real than the people I met in my day to day life"
+    m 2b "I guess that's one of the reasons I like literature so much"
+    m 2j "But no fictional character can feel more real than you, [player]"
+    show monika 5a at t11 zorder 2 with dissolve
+    m "And that's one of the reasons I love {i}you{/i} so much~"
+    return
+
+init 5 python:
+    #This is a list of keywords for this topic
+    for key in ['italy' , 'rome' , 'venice' , 'florence']:
+        monika_topics.setdefault(key,[])
+
+label monika_italy:
+    m 1d "Italy?"
+    m 3b "It would be a wonderful place to go together when I'll be in your reality"
+    m 2r "I can already imagine it, we slowly pass through the streets of Rome"
+    m 1j "We hug each other as we sail through the canals of Venice"
+    m "We stand together in the bell tower of Florence, and as the sun sets we lean towards each other"
+    m "And then slowly..."
+    m 3l "Well, you get the idea"
+    m 1a "Maybe I'm thinking too far ahead"
+    show monika 5a at t11 zorder 2 with dissolve
+    m "But be honest, doeesn't it sound nice?"
+    return
+
+init 5 python:
+    #This is a list of keywords for this topic
+    for key in ['germany' , 'goethe' , 'schiller']:
+        monika_topics.setdefault(key,[])
+
+label monika_italy:
+    m 3d "Germany?"
+    m 2k "Some of my favorite poets are German!"
+    m 2b "Like Goethe and Schiller for example"
+    m "They wrote about nature and the soul"
+    m 2a "and they combained the ideas of Romanticism and the enlightenment"
+    m 2b "Here's a nice quote from Goethe:"
+    m 1r "{i}The soul that sees beauty may sometimes walk alone{/i}"
+    m 1k "though I can't feel alone as long as you're here with me~"
+    m 1b "Ich liebe dich, [player]!"
+    m 1k "I think that's how you say {i}I love you{/i} in German"
+    return
+
 ##################
 #Incomplete ideas#
 ##################
